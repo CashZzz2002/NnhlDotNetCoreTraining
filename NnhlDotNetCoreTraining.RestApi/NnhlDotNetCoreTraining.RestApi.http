@@ -1,0 +1,6 @@
+@NnhlDotNetCoreTraining.RestApi_HostAddress = http://localhost:5208
+
+GET {{NnhlDotNetCoreTraining.RestApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
