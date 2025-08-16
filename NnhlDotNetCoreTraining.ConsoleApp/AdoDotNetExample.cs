@@ -16,9 +16,9 @@ namespace NnhlDotNetCoreTraining.ConsoleApp
                 string query = @"SELECT [BlogId], [BlogTitle], [BlogAuthor], [BlogContent]
                                  FROM [dbo].[Tbl_Blog]";
 
-                SqlCommand cmd = new SqlCommand(query, con);
-                DataTable dt = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                SqlCommand cmd = new SqlCommand(query, con);//SqlCommand ka database mer query write pee run tha lo a lok lok tr
+                DataTable dt = new DataTable();//memo(storge) place of project
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);// SqlDataAdapter is a bridge between your program and the database. 
                 adapter.Fill(dt);
             }
             Console.WriteLine("connection is closed");

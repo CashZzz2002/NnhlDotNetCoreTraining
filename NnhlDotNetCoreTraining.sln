@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NnhlDotNetCoreTraining.Rest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NnhlDotNetCoreTraining.ConsoleApp2", "NnhlDotNetCoreTraining.ConsoleApp2\NnhlDotNetCoreTraining.ConsoleApp2.csproj", "{A9608CA8-8A17-4825-973E-5F366C875984}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NnhlDotNetCoreTraining.Shared", "NnhlDotNetCoreTraining.Shared\NnhlDotNetCoreTraining.Shared.csproj", "{325A1664-3813-4761-BCDF-33841C411A24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A9608CA8-8A17-4825-973E-5F366C875984}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9608CA8-8A17-4825-973E-5F366C875984}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9608CA8-8A17-4825-973E-5F366C875984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{325A1664-3813-4761-BCDF-33841C411A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325A1664-3813-4761-BCDF-33841C411A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325A1664-3813-4761-BCDF-33841C411A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{325A1664-3813-4761-BCDF-33841C411A24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

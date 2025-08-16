@@ -34,7 +34,7 @@ namespace NnhlDotNetCoreTraining.ConsoleApp
             using (IDbConnection db = new SqlConnection(_connectionString))
             {
                 string query = "Select * from tbl_blog where del_flg=0;";
-                var lst = db.Query<BlogDataModel>(query).ToList();//query ko excute lok tr
+                var lst = db.Query<BlogDataModel>(query).ToList();//query ko execute lok tr
                 foreach (var item in lst)
                 {
                     Console.WriteLine(item.BlogId);
@@ -124,7 +124,8 @@ namespace NnhlDotNetCoreTraining.ConsoleApp
                 db.Close();
             }
         }
-        public void Delete() {
+        public void Delete() 
+        {
             Console.WriteLine("Enter the id of Blog :");
             int id= Convert.ToInt32(Console.ReadLine());
             string selectQuery = @"SELECT [BlogId], [BlogTitle], [BlogAuthor], [BlogContent], [del_flg]
@@ -168,6 +169,30 @@ namespace NnhlDotNetCoreTraining.ConsoleApp
                     Console.WriteLine("Delete is Success");
                 }
                 db.Close();
+            }
+
+        }
+        public void Edit(int id)
+        {
+            using (IDbConnection db = new SqlConnection(_connectionString)) 
+            {
+                string query = "Select * from tbl_blog where del_flg = 0 and BlogId =@BlogId";
+                var item = db.Query<BlogDapperDataModel>(query, new BlogDapperDataModel
+                {
+                 BlogId= id
+                }).FirstOrDefault();
+
+                if (item is null)
+                {
+                    Console.WriteLine("data not found ...");
+                    return;
+                }
+                Console.WriteLine(item.BlogId);
+                Console.WriteLine(item.BlogTitle);
+                Console.WriteLine(item.BlogAuthor);
+                Console.WriteLine(item.BlogContent);
+
+
             }
 
         }
